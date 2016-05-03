@@ -435,6 +435,10 @@ public class HomePane extends JRootPane implements HomeView {
           preferences, controller, "setMode", PlanController.Mode.ROOM_CREATION);
       createToggleAction(ActionType.CREATE_POLYLINES, planController.getMode() == PlanController.Mode.POLYLINE_CREATION, modeGroup, 
           preferences, controller, "setMode", PlanController.Mode.POLYLINE_CREATION);
+      
+      createToggleAction(ActionType.CREATE_DIMENSION_CONSTRAINT, planController.getMode() == PlanController.Mode.DIMENSION_CONSTRAINT, modeGroup, 
+          preferences, controller, "setMode", PlanController.Mode.DIMENSION_CONSTRAINT);
+      
       createToggleAction(ActionType.CREATE_DIMENSION_LINES, planController.getMode() == PlanController.Mode.DIMENSION_LINE_CREATION, modeGroup, 
           preferences, controller, "setMode", PlanController.Mode.DIMENSION_LINE_CREATION);
       createToggleAction(ActionType.CREATE_LABELS, planController.getMode() == PlanController.Mode.LABEL_CREATION, modeGroup, 

@@ -92,6 +92,7 @@ public class PlanController extends FurnitureController implements Controller {
     public static final Mode WALL_CREATION           = new Mode("WALL_CREATION");
     public static final Mode ROOM_CREATION           = new Mode("ROOM_CREATION");
     public static final Mode POLYLINE_CREATION       = new Mode("POLYLINE_CREATION");
+    public static final Mode DIMENSION_CONSTRAINT = new Mode("DIMENSION_CONSTRAINT");   //added by TmRocha89
     public static final Mode DIMENSION_LINE_CREATION = new Mode("DIMENSION_LINE_CREATION");
     public static final Mode LABEL_CREATION          = new Mode("LABEL_CREATION");
     
@@ -6549,6 +6550,8 @@ public class PlanController extends FurnitureController implements Controller {
         setState(getRoomCreationState());
       } else if (mode == Mode.POLYLINE_CREATION) {
         setState(getPolylineCreationState());
+      } else if (mode == Mode.DIMENSION_CONSTRAINT) {   //added by TmRocha89
+          setState(getDimensionLineCreationState());
       } else if (mode == Mode.DIMENSION_LINE_CREATION) {
         setState(getDimensionLineCreationState());
       } else if (mode == Mode.LABEL_CREATION) {
@@ -7220,6 +7223,8 @@ public class PlanController extends FurnitureController implements Controller {
         setState(getRoomCreationState());
       } else if (mode == Mode.POLYLINE_CREATION) {
         setState(getPolylineCreationState());
+      } else if (mode == Mode.DIMENSION_CONSTRAINT) {       //added by TmRocha89
+          setState(getDimensionLineCreationState());
       } else if (mode == Mode.DIMENSION_LINE_CREATION) {
         setState(getDimensionLineCreationState());
       } else if (mode == Mode.LABEL_CREATION) {
@@ -10039,6 +10044,8 @@ public class PlanController extends FurnitureController implements Controller {
         setState(getWallCreationState());
       } else if (mode == Mode.POLYLINE_CREATION) {
         setState(getPolylineCreationState());
+      } else if (mode == Mode.DIMENSION_CONSTRAINT) {       //added by TmRocha89
+        setState(getDimensionLineCreationState());
       } else if (mode == Mode.DIMENSION_LINE_CREATION) {
         setState(getDimensionLineCreationState());
       } else if (mode == Mode.LABEL_CREATION) {
